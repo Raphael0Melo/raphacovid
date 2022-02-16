@@ -3,13 +3,9 @@
   padding-bottom: 250px;
 }
 
-.container {
-  
-  
-}
 
 .container .search {
-  width: 23%;
+  width: 70%;
   padding: 5px;
   margin-bottom: 20px;
 }
@@ -30,62 +26,24 @@
 
 
 .container h3 {
-  background-color: rgb(0,0,139);
-  color: #fff;
+  background-color: #fff;
+  color: rgb(0,0,139);
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #fff;
   margin-bottom: 25px;
 }
 
-.container #card-container {  
-  padding-bottom: 20px;
-}
 
 
-.card h3 {
-  font-size: 15px;
-  background-color: rgb(0,0,139);
-  color: #fff;
-  text-align: center;
-  border: 1px solid #fff;
-  margin-bottom: 0;
-}
 
-.container  p {
-  /* text-align: center; */
-  font-weight: bold;
-  font-size: 10px;
-}
 
-.container p span {
-  color: darkgoldenrod;
-  font-weight: normal;
-  font-size: 10px;
-}
 
 
 
 
 @media(min-width: 768px) {
-  
-  .card h3 {
-    font-size: 20px;
-    background-color: rgb(0,0,139);
-    color: #fff;
-    text-align: center;
-    border: 1px solid #fff;
+  .container .search {
+    width: 30%;
   }
-  
-  .container  p {
-    /* text-align: center; */
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  .container p span {
-    color: darkgoldenrod;
-    font-weight: normal;
-    font-size: 14px;
-  }
-  
 }

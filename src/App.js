@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import api from './services/api'
+import Card from './components/Card';
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
       const teste = name.filter((item) =>
         item.country === search
       )
-      console.log(teste)
+      //console.log(teste)
       setCountry(teste)
     }
   }
@@ -55,64 +56,55 @@ function App() {
             className="btn btn-primary"
             id='button'
             onClick={searchClick}
-
           >
             Pesquisar
           </button>
-
         </div>
-        {country.length > 0 && (
-          <div className="row" >
-            <div className="col-6 col-md-3">
-              <div className="card">
-                <h3 id="title-card">{country[0].country}</h3>
-                <div className="card-body">
-                  <p className="card-title">Nº casos ativo: <span>{country[0].active}</span> </p>
-                  <p className="card-title">Nº casos: <span>{country[0].cases}</span> </p>
-                  <p className="card-title">Nº casos/milhão: <span>{country[0].casesPerOneMillion} </span></p>
-                  <p className="card-title">Nº casos críticos: <span>{country[0].critical}</span> </p>
-                  <p className="card-title">Nº de mortes: <span>{country[0].deaths}</span> </p>
-                  <p className="card-title">Nº de mortes/milhão: <span>{country[0].deathsPerOneMillion}</span> </p>
-                  <p className="card-text">Nº casos recuperados: <span>{country[0].recovered}</span></p>
-                  <p className="card-text">Nº testes/milhão: <span>{country[0].testsPerOneMillion}</span></p>
-                  <p className="card-text">Nº casos hoje: <span>{country[0].todayCases}</span></p>
-                  <p className="card-text">Nº de mortes hoje: <span>{country[0].todayDeaths}</span></p>
-                  <p className="card-text">Nº total de testes: <span>{country[0].totalTests}</span></p>
-                </div>
-              </div>
-            </div>
+
+        <div className="row" >
+          <div className="col-6 col-md-3">
+            {country.length > 0 && (
+              <Card
+                title={country[0].country}
+                textCard1={country[0].active}
+                textCard2={country[0].cases}
+                textCard3={country[0].casesPerOneMillion}
+                textCard4={country[0].critical}
+                textCard5={country[0].deaths}
+                textCard6={country[0].deathsPerOneMillion}
+                textCard7={country[0].recovered}
+                textCard8={country[0].testsPerOneMillion}
+                textCard9={country[0].todayCases}
+                textCard10={country[0].todayDeaths}
+                textCard11={country[0].totalTests}
+              />
+            )}
           </div>
-        )}
+        </div>
+
 
         {(search === '' || country.length === 0) && (
           <div className="row">
             {name.map((item) => {
               return (
                 <div className="col-6 col-md-3" id="card-container">
-
-                  <div className="card">
-                    <h3 id="title-card">{item.country}</h3>
-                    <div className="card-body">
-                      <p className="card-title">Nº casos ativo: <span>{item.active}</span> </p>
-                      <p className="card-title">Nº casos: <span>{item.cases}</span> </p>
-                      <p className="card-title">Nº casos/milhão: <span>{item.casesPerOneMillion} </span></p>
-                      <p className="card-title">Nº casos críticos: <span>{item.critical}</span> </p>
-                      <p className="card-title">Nº de mortes: <span>{item.deaths}</span> </p>
-                      <p className="card-title">Nº de mortes/milhão: <span>{item.deathsPerOneMillion}</span> </p>
-                      <p className="card-text">Nº casos recuperados: <span>{item.recovered}</span></p>
-                      <p className="card-text">Nº testes/milhão: <span>{item.testsPerOneMillion}</span></p>
-                      <p className="card-text">Nº casos hoje: <span>{item.todayCases}</span></p>
-                      <p className="card-text">Nº de mortes hoje: <span>{item.todayDeaths}</span></p>
-                      <p className="card-text">Nº total de testes: <span>{item.totalTests}</span></p>
-
-                    </div>
-                  </div>
-
+                  <Card
+                    title={item.country}
+                    textCard1={item.active}
+                    textCard2={item.cases}
+                    textCard3={item.casesPerOneMillion}
+                    textCard4={item.critical}
+                    textCard5={item.deaths}
+                    textCard6={item.deathsPerOneMillion}
+                    textCard7={item.recovered}
+                    textCard8={item.testsPerOneMillion}
+                    textCard9={item.todayCases}
+                    textCard10={item.todayDeaths}
+                    textCard11={item.totalTests}
+                  />
                 </div>
-
               )
             })}
-
           </div>
         )}
 

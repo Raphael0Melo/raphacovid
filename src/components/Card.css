@@ -1,0 +1,56 @@
+.card-container {  
+  padding-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+}
+
+.card-container .card h3 {
+  font-size: 15px;
+  background-color: rgb(0,0,139);
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgb(0,0,139);
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+
+.card  p {
+  /* text-align: center; */
+  font-weight: bold;
+  font-size: 10px;
+  color: rgb(0,0,139);
+}
+
+.card-container .card p span {
+  color: #000;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+
+
+
+@media(min-width: 768px) {
+  
+  .card h3 {
+    font-size: 20px;
+    background-color: rgb(0,0,139);
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+  
+  .card-container .card  p {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .card-container .card p span {
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  
+}
